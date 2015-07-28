@@ -1,12 +1,27 @@
-import path from 'path';
+'use strict';
 
-export default class Badgs {
+exports.__esModule = true;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+var _path = require('path');
+
+var _path2 = _interopRequireDefault(_path);
+
+var Badgs = (function () {
   /**
    * @param {Object} options
    * @param {String} options.template - built-in template name [flat]
    * @param {Function} options.customTemplate
    */
-  constructor({ template, customTemplate }) {
+
+  function Badgs(_ref) {
+    var template = _ref.template;
+    var customTemplate = _ref.customTemplate;
+
+    _classCallCheck(this, Badgs);
 
     if (customTemplate) {
       this.template = customTemplate;
@@ -24,7 +39,8 @@ export default class Badgs {
    *
    * @return {String}
    */
-  mapColor(color) {
+
+  Badgs.prototype.mapColor = function mapColor(color) {
     switch (color) {
       case 'brightgreen':
         return '#4c1';
@@ -43,13 +59,13 @@ export default class Badgs {
       case 'blue':
         return '#007ec6';
       default:
-        if ((/^([a-f0-9]{3}){1,2}$/i).test(color)) {
+        if (/^([a-f0-9]{3}){1,2}$/i.test(color)) {
           return '#' + color.toLowerCase();
         }
 
         return '#9f9f9f';
     }
-  }
+  };
 
   /**
    * Render badge with provied subject and status.
@@ -60,8 +76,9 @@ export default class Badgs {
    *
    * @return {String}
    */
-  render(subject, status, color) {
-    const templateData = {
+
+  Badgs.prototype.render = function render(subject, status, color) {
+    var templateData = {
       textA: subject,
       textB: status,
       color: this.mapColor(color),
@@ -70,5 +87,10 @@ export default class Badgs {
     };
 
     return this.template(templateData);
-  }
-}
+  };
+
+  return Badgs;
+})();
+
+exports['default'] = Badgs;
+module.exports = exports['default'];
