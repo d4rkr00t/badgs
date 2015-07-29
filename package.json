@@ -7,6 +7,7 @@
   "repository": "d4rkr00t/badgs",
   "scripts": {
     "audit": "nsp package",
+    "babel-node": "babel-node",
     "build": "babel -d ./lib ./src",
     "check": "npm run audit && npm outdated --depth 0",
     "cov": "isparta cover _mocha --include src/*.js src/**/.js --report lcovonly --report html -- test/*.test.js -r babel/register -r test/setup.js",
