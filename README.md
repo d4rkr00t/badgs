@@ -33,8 +33,8 @@ TODO
 
 Package | Version | Dev
 --- |:---:|:---:
-[babel](https://www.npmjs.com/package/babel) | ^5.8.5 | ✔
-[babel-eslint](https://www.npmjs.com/package/babel-eslint) | ^4.0.0 | ✔
+[babel](https://www.npmjs.com/package/babel) | ^5.8.12 | ✔
+[babel-eslint](https://www.npmjs.com/package/babel-eslint) | ^4.0.5 | ✔
 [chai](https://www.npmjs.com/package/chai) | ^3.2.0 | ✔
 [coveralls](https://www.npmjs.com/package/coveralls) | ^2.11.3 | ✔
 [eslint](https://www.npmjs.com/package/eslint) | ^0.24.1 | ✔
