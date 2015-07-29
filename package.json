@@ -1,6 +1,6 @@
 {
   "name": "badgs",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Badges generator",
   "main": "lib/index.js",
   "license": "MIT",
