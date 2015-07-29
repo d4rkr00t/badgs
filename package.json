@@ -1,6 +1,6 @@
 {
   "name": "badgs",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Badges generator",
   "main": "lib/index.js",
   "license": "MIT",
@@ -16,7 +16,6 @@
     "precheck": "npm run validate",
     "prepublish": "npm run readme | npm run build",
     "readme": "node ./node_modules/node-readme/bin/node-readme.js",
-    "start": "npm run build -- -w",
     "test": "mocha test/*.test.js -r babel/register -r test/setup.js",
     "validate": "npm run lint && npm run build && npm test"
   },
