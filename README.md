@@ -12,7 +12,11 @@ Badges generator
 
 ## Features
 
-* Generate badges.
+* Generates badges like any you can see above.
+* No dependecies.
+* Small and possibly work even on client.
+* Easy to write own templating function.
+* Well tested.
 
 ## Install
 
@@ -50,3 +54,7 @@ Stanislav Sysoev <d4rkr00t@gmail.com> http://github.com/d4rkr00t
 ## License
 
  - **MIT** : http://opensource.org/licenses/MIT
+
+## Contributing
+
+Contributing are highly welcome!
