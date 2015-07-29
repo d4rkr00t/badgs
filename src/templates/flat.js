@@ -19,8 +19,8 @@ export default function flatTemplate({ widthA, widthB, color, subject, status })
     <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
       <text x="${widthA / 2}" y="15" fill="#010101" fill-opacity=".3">${subject}</text>
       <text x="${widthA / 2}" y="14">${subject}</text>
-      <text x="${widthA + (widthB / 2) - 1}" y="15" fill="#010101" fill-opacity=".3">${status}</text>
-      <text x="${widthA + (widthB / 2) - 1}" y="14">${status}</text>
+      <text x="${widthA + (widthB / 2)}" y="15" fill="#010101" fill-opacity=".3">${status}</text>
+      <text x="${widthA + (widthB / 2)}" y="14">${status}</text>
     </g>
   </svg>`;
 }

@@ -7,7 +7,7 @@ export default function flatSquareTemplate({ widthA, widthB, color, subject, sta
     </g>
     <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
       <text x="${widthA / 2}" y="14">${subject}</text>
-      <text x="${widthA + (widthB / 2) - 1}" y="14">${status}</text>
+      <text x="${widthA + (widthB / 2)}" y="14">${status}</text>
     </g>
   </svg>
   `;

@@ -10,7 +10,7 @@ const COLOR_MAP = {
 };
 
 const LETTER_SIZE = 5;
-const CAP_CORRECTION = 0.4;
+const CORRECTION = 0.4;
 const PADDING_SIZE = 4;
 
 export default class Badgs {
@@ -46,18 +46,20 @@ export default class Badgs {
   }
 
   /**
-   * Add correction if there are any capitalize letters.
+   * Add correction for size for capital letters, digits, % etc.
    *
    * @param {String} text
    *
    * @returns {Number}
    */
-  capCorrection(text) {
+  correction(text) {
     let correction = 0;
 
     for (let i = 0; i < text.length; i++) {
-      if (text[i].toUpperCase() === text[i]) {
-        correction += CAP_CORRECTION;
+      if (text[i].match('%')) {
+        correction += LETTER_SIZE;
+      } else if (text[i].toUpperCase() === text[i]) {
+        correction += CORRECTION;
       }
     }
 
@@ -72,7 +74,12 @@ export default class Badgs {
    * @returns {Number}
    */
   calcWidth(text) {
-    return Math.ceil(text.length * (LETTER_SIZE + PADDING_SIZE) + this.capCorrection(text));
+    let width = 0;
+
+    width += text.length * (LETTER_SIZE + PADDING_SIZE);
+    width += this.correction(text);
+
+    return Math.ceil(width);
   }
 
   /**

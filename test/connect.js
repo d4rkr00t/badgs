@@ -1,7 +1,7 @@
 import connect from 'connect';
 import http from 'http';
-import Badgs from './../lib/';
-import badgesMiddleware from './../lib/middleware';
+import Badgs from './../src';
+import badgesMiddleware from './../src/middleware';
 
 const app = connect();
 

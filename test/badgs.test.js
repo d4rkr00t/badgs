@@ -38,11 +38,15 @@ describe('Badgs', function () {
     });
   });
 
-  describe('#capCorrection', function () {
+  describe('#correction', function () {
     const badg = new Badgs();
 
     it('should add correction for each capital letter in word', function () {
-      assert.equal(badg.capCorrection('WordWithFourCaps'), 1.6);
+      assert.equal(badg.correction('WordWithFourCaps'), 1.6);
+    });
+
+    it('should add extra correction for %', function () {
+      assert.equal(badg.correction('Test%'), 5.4);
     });
   });
 

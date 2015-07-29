@@ -1,6 +1,6 @@
 import express from 'express';
-import Badgs from './../lib/';
-import badgesMiddleware from './../lib/middleware';
+import Badgs from './../src';
+import badgesMiddleware from './../src/middleware';
 
 const app = express();
 
