@@ -1,6 +1,20 @@
-import path from 'path';
+const COLOR_MAP = {
+  brightgreen: '#4c1',
+  green: '#97ca00',
+  yellowgreen: '#a4a61d',
+  yellow: '#dfb317',
+  orange: '#fe7d37',
+  red: '#e05d44',
+  lightgrey: '#9f9f9f',
+  blue: '#007ec6'
+};
+
+const LETTER_SIZE = 5;
+const CAP_CORRECTION = 0.4;
+const PADDING_SIZE = 4;
 
 export default class Badgs {
+
   /**
    * @param {Object} options
    * @param {String} options.template - built-in template name [flat]
@@ -22,33 +36,46 @@ export default class Badgs {
    *
    * @param {String} color - keyword or hex value.
    *
-   * @return {String}
+   * @returns {String}
    */
   mapColor(color) {
-    switch (color) {
-      case 'brightgreen':
-        return '#4c1';
-      case 'green':
-        return '#97ca00';
-      case 'yellowgreen':
-        return '#a4a61d';
-      case 'yellow':
-        return '#dfb317';
-      case 'orange':
-        return '#fe7d37';
-      case 'red':
-        return '#e05d44';
-      case 'lightgrey':
-        return '#9f9f9f';
-      case 'blue':
-        return '#007ec6';
-      default:
-        if ((/^([a-f0-9]{3}){1,2}$/i).test(color)) {
-          return '#' + color.toLowerCase();
-        }
+    if (COLOR_MAP[color]) return COLOR_MAP[color];
 
-        return '#9f9f9f';
+    if ((/^([a-f0-9]{3}){1,2}$/i).test(color)) {
+      return '#' + color.toLowerCase();
     }
+
+    return '#9f9f9f';
+  }
+
+  /**
+   * Add correction if there are any capitalize letters.
+   *
+   * @param {String} text
+   *
+   * @returns {Number}
+   */
+  capCorrection(text) {
+    let correction = 0;
+
+    for (let i = 0; i < text.length; i++) {
+      if (text[i].toUpperCase() === text[i]) {
+        correction += CAP_CORRECTION;
+      }
+    }
+
+    return correction;
+  }
+
+  /**
+   * Calculates width of block with text.
+   *
+   * @param {String} text
+   *
+   * @returns {Number}
+   */
+  calcWidth(text) {
+    return Math.ceil(text.length * (LETTER_SIZE + PADDING_SIZE) + this.capCorrection(text));
   }
 
   /**
@@ -58,15 +85,15 @@ export default class Badgs {
    * @param {String} status
    * @param {String} color - color, keyword or hex (#fff)
    *
-   * @return {String}
+   * @returns {String}
    */
   render(subject, status, color) {
     const templateData = {
-      textA: subject,
-      textB: status,
+      subject,
+      status,
       color: this.mapColor(color),
-      widthA: subject.length * 5 + 15,
-      widthB: status.length * 5 + 15
+      widthA: this.calcWidth(subject),
+      widthB: this.calcWidth(status)
     };
 
     return this.template(templateData);
