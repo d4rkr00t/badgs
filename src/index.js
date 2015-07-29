@@ -9,9 +9,16 @@ const COLOR_MAP = {
   blue: '#007ec6'
 };
 
-const LETTER_SIZE = 5;
-const CORRECTION = 0.4;
-const PADDING_SIZE = 4;
+const BIG_CHARS = ['%', '—'];
+const SMALL_CHARS = ['.', ',', '\'', '"'];
+const DIGIT_REGEX = /\d/;
+
+const BIG_CHAR_SIZE = 8;
+const CHAR_SIZE = 5.8;
+const SMALL_CHAR_SIZE = 3;
+const DIGIT_SIZE = 7;
+
+const PADDING_SIZE = 9;
 
 export default class Badgs {
 
@@ -46,27 +53,6 @@ export default class Badgs {
   }
 
   /**
-   * Add correction for size for capital letters, digits, % etc.
-   *
-   * @param {String} text
-   *
-   * @returns {Number}
-   */
-  correction(text) {
-    let correction = 0;
-
-    for (let i = 0; i < text.length; i++) {
-      if (text[i].match('%')) {
-        correction += LETTER_SIZE;
-      } else if (text[i].toUpperCase() === text[i]) {
-        correction += CORRECTION;
-      }
-    }
-
-    return correction;
-  }
-
-  /**
    * Calculates width of block with text.
    *
    * @param {String} text
@@ -76,10 +62,21 @@ export default class Badgs {
   calcWidth(text) {
     let width = 0;
 
-    width += text.length * (LETTER_SIZE + PADDING_SIZE);
-    width += this.correction(text);
+    for (let i = 0; i < text.length; i++) {
+      if (BIG_CHARS.indexOf(text[i]) !== -1) {
+        width += BIG_CHAR_SIZE;
+      } else if (text[i].toLowerCase() !== text[i]) {
+        width += BIG_CHAR_SIZE;
+      } else if (DIGIT_REGEX.test(text[i])) {
+        width += DIGIT_SIZE;
+      } else if (SMALL_CHARS.indexOf(text[i]) !== -1) {
+        width += SMALL_CHAR_SIZE;
+      } else {
+        width += CHAR_SIZE;
+      }
+    }
 
-    return Math.ceil(width);
+    return Math.ceil(width + PADDING_SIZE * 2);
   }
 
   /**

@@ -10,7 +10,7 @@
     "babel-node": "babel-node",
     "build": "babel -d ./lib ./src",
     "check": "npm run audit && npm outdated --depth 0",
-    "cov": "isparta cover _mocha --include src/*.js src/**/.js --report lcovonly --report html -- test/*.test.js -r babel/register -r test/setup.js",
+    "cov": "babel-node ./node_modules/.bin/isparta cover _mocha --report lcovonly --report html -- test/*.test.js -r test/setup.js",
     "coveralls": "npm run cov && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
     "lint": "eslint src test",
     "precheck": "npm run validate",

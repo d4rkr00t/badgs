@@ -38,23 +38,11 @@ describe('Badgs', function () {
     });
   });
 
-  describe('#correction', function () {
-    const badg = new Badgs();
-
-    it('should add correction for each capital letter in word', function () {
-      assert.equal(badg.correction('WordWithFourCaps'), 1.6);
-    });
-
-    it('should add extra correction for %', function () {
-      assert.equal(badg.correction('Test%'), 5.4);
-    });
-  });
-
   describe('#calcWidth', function () {
     const badg = new Badgs();
 
     it('should correctly caluclate width for word container', function () {
-      assert.equal(badg.calcWidth('WordWithFourCaps'), 146);
+      assert.equal(badg.calcWidth('Word-with-caps—and %big, small, any characters 9'), 299);
     });
   });
 
