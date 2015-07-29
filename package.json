@@ -20,10 +20,9 @@
     "validate": "npm run lint && npm run build && npm test"
   },
   "keywords": [
-    "error",
-    "promise",
-    "base",
-    "helper"
+    "badges",
+    "svg",
+    "generator"
   ],
   "author": {
     "name": "Stanislav Sysoev",
