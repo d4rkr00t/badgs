@@ -16,18 +16,15 @@ const PADDING_SIZE = 4;
 export default class Badgs {
 
   /**
-   * @param {Object} options
-   * @param {String} options.template - built-in template name [flat]
-   * @param {Function} options.customTemplate
+   * @param {String|Function} template - built-in template name [flat] or custom template function.
    */
-  constructor({ template, customTemplate }) {
+  constructor(template) {
 
-    if (customTemplate) {
-      this.template = customTemplate;
-      return;
+    if (!template || typeof template === 'string') {
+      this.template = require('./templates/' + (template || 'flat'));
+    } else {
+      this.template = template;
     }
-
-    this.template = require('./templates/' + (template || 'flat'));
   }
 
   /**
@@ -45,7 +42,7 @@ export default class Badgs {
       return '#' + color.toLowerCase();
     }
 
-    return '#9f9f9f';
+    return COLOR_MAP.lightgrey;
   }
 
   /**

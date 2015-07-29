@@ -6,6 +6,9 @@
     "mocha": true,
     "browser": true
   },
+  "globals": {
+    "assert"
+  },
   "rules": {
     // possible errors
     "comma-dangle": [2, "never"],

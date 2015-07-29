@@ -1,4 +1,4 @@
-export default function flatTemplate({ widthA, widthB, color, subject, status }) {
+export default function flatSquareTemplate({ widthA, widthB, color, subject, status }) {
   return `
   <svg xmlns="http://www.w3.org/2000/svg" width="${widthA + widthB}" height="20">
     <g shape-rendering="crispEdges">

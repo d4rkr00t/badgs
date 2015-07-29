@@ -9,14 +9,14 @@
     "audit": "nsp package",
     "build": "babel -d ./lib ./src",
     "check": "npm run audit && npm outdated --depth 0",
-    "cov": "",
+    "cov": "isparta cover _mocha --include src/*.js src/**/.js --report lcovonly --report html -- test/*.test.js -r babel/register -r test/setup.js",
     "coveralls": "npm run cov && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
     "lint": "eslint src test",
     "precheck": "npm run validate",
     "prepublish": "npm run readme | npm run build",
     "readme": "node ./node_modules/node-readme/bin/node-readme.js",
     "start": "npm run build -- -w",
-    "test": "",
+    "test": "mocha test/*.test.js -r babel/register -r test/setup.js",
     "validate": "npm run lint && npm run build && npm test"
   },
   "keywords": [
@@ -35,8 +35,12 @@
   "devDependencies": {
     "babel": "^5.8.5",
     "babel-eslint": "^4.0.0",
+    "chai": "^3.2.0",
     "coveralls": "^2.11.3",
     "eslint": "^0.24.1",
+    "isparta": "^3.0.3",
+    "mocha": "^2.2.5",
+    "mocha-lcov-reporter": "0.0.2",
     "node-readme": "^0.1.8",
     "nsp": "^1.0.3",
     "pre-commit": "^1.0.10"
