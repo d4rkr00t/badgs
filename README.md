@@ -17,6 +17,7 @@ Badges generator
 * Small and possibly work even on client.
 * Easy to write own templating function.
 * Well tested.
+* Express/Connect middleware.
 
 ## Install
 
