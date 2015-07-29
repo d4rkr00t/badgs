@@ -38,8 +38,7 @@ Package | Version | Dev
 
 ## Author
 
-[Artems](https://github.com/artems) — author of huge part of code.
-Ideas/Templates — stolen from [here](https://github.com/badges/shields).
+Ideas/Templates — stolen from [here](https://github.com/badges/shields) and [here](https://github.com/artems/devkit).
 
 Stanislav Sysoev <d4rkr00t@gmail.com> http://github.com/d4rkr00t
 
