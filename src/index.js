@@ -10,11 +10,13 @@ const COLOR_MAP = {
 };
 
 const BIG_CHARS = ['%', '—'];
-const SMALL_CHARS = ['.', ',', '\'', '"'];
+const MEDIUM_CHARS = ['w', 'm', 'м', 'd', 'b'];
+const SMALL_CHARS = ['.', ',', '\'', '"', ':', 'l', 'i'];
 const DIGIT_REGEX = /\d/;
 
-const BIG_CHAR_SIZE = 8;
-const CHAR_SIZE = 5.8;
+const BIG_CHAR_SIZE = 9;
+const MEDIUM_CHAR_SIZE = 7;
+const CHAR_SIZE = 6;
 const SMALL_CHAR_SIZE = 3;
 const DIGIT_SIZE = 7;
 
@@ -26,7 +28,6 @@ export default class Badgs {
    * @param {String|Function} template - built-in template name [flat] or custom template function.
    */
   constructor(template) {
-
     if (!template || typeof template === 'string') {
       this.template = require('./templates/' + (template || 'flat'));
     } else {
@@ -65,12 +66,14 @@ export default class Badgs {
     for (let i = 0; i < text.length; i++) {
       if (BIG_CHARS.indexOf(text[i]) !== -1) {
         width += BIG_CHAR_SIZE;
+      } else if (MEDIUM_CHARS.indexOf(text[i]) !== -1) {
+        width += MEDIUM_CHAR_SIZE;
+      } else if (SMALL_CHARS.indexOf(text[i]) !== -1) {
+        width += SMALL_CHAR_SIZE;
       } else if (text[i].toLowerCase() !== text[i]) {
         width += BIG_CHAR_SIZE;
       } else if (DIGIT_REGEX.test(text[i])) {
         width += DIGIT_SIZE;
-      } else if (SMALL_CHARS.indexOf(text[i]) !== -1) {
-        width += SMALL_CHAR_SIZE;
       } else {
         width += CHAR_SIZE;
       }

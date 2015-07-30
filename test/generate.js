@@ -9,7 +9,7 @@ fs.writeFileSync('flat-build-failed.svg', badg.render('build', 'failed', 'red'),
 fs.writeFileSync('flat-build-passed.svg', badg.render('build', 'passed', 'green'), 'utf-8');
 fs.writeFileSync('flat-build-success.svg', badg.render('build', 'success', 'green'), 'utf-8');
 fs.writeFileSync('flat-build-inaccessible.svg', badg.render('build', 'inaccessible', 'lightgrey'), 'utf-8');
-fs.writeFileSync('flat-test-2-2.svg', badg.render('tests', '2 / 2', 'green'), 'utf-8');
+fs.writeFileSync('flat-test-2-2.svg', badg.render('tests', '2/2', 'green'), 'utf-8');
 fs.writeFileSync('flat-coverage-83.svg', badg.render('coverage', '83%', 'yellowgreen'), 'utf-8');
 fs.writeFileSync('flat-coverage-100.svg', badg.render('coverage', '100%', 'green'), 'utf-8');
 fs.writeFileSync('flat-tech-debt.svg', badg.render('tech debt', '0.4%', 'green'), 'utf-8');
