@@ -42,7 +42,7 @@ describe('Badgs', function () {
     const badg = new Badgs();
 
     it('should correctly caluclate width for word container', function () {
-      assert.equal(badg.calcWidth('Word-with-caps—and %big, small, any characters 9'), 303);
+      assert.equal(badg.calcWidth('Word-with-caps—and %big, small, any characters 9'), 298);
     });
   });
 

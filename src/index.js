@@ -10,15 +10,18 @@ const COLOR_MAP = {
 };
 
 const BIG_CHARS = ['%', '—'];
-const MEDIUM_CHARS = ['w', 'm', 'м', 'd', 'b'];
-const SMALL_CHARS = ['.', ',', '\'', '"', ':', 'l', 'i'];
+const MEDIUM_CHARS = ['w', 'm', 'м', 'd', 'b', 'o', 'n'];
+const SMALL_CHARS = ['\'', 'l', 'i', 't'];
+const PUNCT_CHARS = ['.', ',', ';', ':'];
 const DIGIT_REGEX = /\d/;
 
+const UPPERCASE_CHAR_SIZE = 9.4;
 const BIG_CHAR_SIZE = 9;
-const MEDIUM_CHAR_SIZE = 7;
-const CHAR_SIZE = 6;
-const SMALL_CHAR_SIZE = 3;
-const DIGIT_SIZE = 7;
+const MEDIUM_CHAR_SIZE = 6.9;
+const CHAR_SIZE = 5.9;
+const SMALL_CHAR_SIZE = 2.9;
+const PUNCT_CHAR_SIZE = 3.8;
+const DIGIT_SIZE = 6.5;
 
 const PADDING_SIZE = 9;
 
@@ -71,9 +74,11 @@ export default class Badgs {
       } else if (SMALL_CHARS.indexOf(text[i]) !== -1) {
         width += SMALL_CHAR_SIZE;
       } else if (text[i].toLowerCase() !== text[i]) {
-        width += BIG_CHAR_SIZE;
+        width += UPPERCASE_CHAR_SIZE;
       } else if (DIGIT_REGEX.test(text[i])) {
         width += DIGIT_SIZE;
+      } else if (PUNCT_CHARS.indexOf(text[i]) !== -1) {
+        width += PUNCT_CHAR_SIZE;
       } else {
         width += CHAR_SIZE;
       }
