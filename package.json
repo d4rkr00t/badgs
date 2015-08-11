@@ -43,6 +43,7 @@
     "mocha-lcov-reporter": "0.0.2",
     "node-readme": "^0.1.8",
     "nsp": "^1.0.3",
-    "pre-commit": "^1.0.10"
+    "pre-commit": "^1.0.10",
+    "supertest": "^1.0.1"
   }
 }
