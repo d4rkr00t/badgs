@@ -33,17 +33,18 @@ TODO
 
 Package | Version | Dev
 --- |:---:|:---:
-[babel](https://www.npmjs.com/package/babel) | ^5.8.12 | ✔
-[babel-eslint](https://www.npmjs.com/package/babel-eslint) | ^4.0.5 | ✔
+[babel](https://www.npmjs.com/package/babel) | ^5.8.21 | ✔
+[babel-eslint](https://www.npmjs.com/package/babel-eslint) | ^4.0.7 | ✔
 [chai](https://www.npmjs.com/package/chai) | ^3.2.0 | ✔
-[coveralls](https://www.npmjs.com/package/coveralls) | ^2.11.3 | ✔
-[eslint](https://www.npmjs.com/package/eslint) | ^0.24.1 | ✔
+[coveralls](https://www.npmjs.com/package/coveralls) | ^2.11.4 | ✔
+[eslint](https://www.npmjs.com/package/eslint) | ^1.1.0 | ✔
 [isparta](https://www.npmjs.com/package/isparta) | ^3.0.3 | ✔
 [mocha](https://www.npmjs.com/package/mocha) | ^2.2.5 | ✔
 [mocha-lcov-reporter](https://www.npmjs.com/package/mocha-lcov-reporter) | 0.0.2 | ✔
 [node-readme](https://www.npmjs.com/package/node-readme) | ^0.1.8 | ✔
 [nsp](https://www.npmjs.com/package/nsp) | ^1.0.3 | ✔
-[pre-commit](https://www.npmjs.com/package/pre-commit) | ^1.0.10 | ✔
+[pre-commit](https://www.npmjs.com/package/pre-commit) | ^1.1.1 | ✔
+[supertest](https://www.npmjs.com/package/supertest) | ^1.0.1 | ✔
 
 
 ## Author
