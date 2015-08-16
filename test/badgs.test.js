@@ -21,6 +21,26 @@ describe('Badgs', function () {
     });
   });
 
+  describe('#processLetter', function () {
+    const badg = new Badgs();
+
+    it('should return defined value if letter in map', function () {
+      assert.equal(badg.processLetter('a'), 6.6);
+    });
+
+    it('should return defined value if letter in map for uppercase letter', function () {
+      assert.equal(badg.processLetter('A'), 7.5);
+    });
+
+    it('should return constant value for unknown lowercase letter', function () {
+      assert.equal(badg.processLetter('å'), 7);
+    });
+
+    it('should return constant value for unknown uppercase letter', function () {
+      assert.equal(badg.processLetter('Å'), 8.7);
+    });
+  });
+
   describe('#mapColor', function () {
     const badg = new Badgs();
 
@@ -42,7 +62,7 @@ describe('Badgs', function () {
     const badg = new Badgs();
 
     it('should correctly caluclate width for word container', function () {
-      assert.equal(badg.calcWidth('Word-with-caps—and %big, small, any characters 9'), 298);
+      assert.equal(badg.calcWidth('Word-with-caps—and %big, small, any characters 9, å'), 321);
     });
   });
 

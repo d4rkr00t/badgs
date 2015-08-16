@@ -22,9 +22,18 @@ const badgesList = [
   { name: 'flat-chocolately', params: ['chocolately', 'v1.9.5.20150320', 'blue'] },
   { name: 'flat-opt-deps', params: ['optionalDependencies', 'up-to-date', 'yellow'] },
   { name: 'flat-python', params: ['python', '2, 2.7, 3, 3.2, 3.3, 3.4', 'lightblue'] },
+  { name: 'flat-platform', params: ['platform', 'ios | osx', 'lightblue'] },
 
   { name: 'flat-only-slim', params: ['lllllllllllllllllllllll', 'iiiiiiiiiiiiiiiiii', 'lightblue'] },
-  { name: 'flat-only-punctuation', params: ['..............', ',;:.,.,\'\'\"', 'orange'] }
+  { name: 'flat-only-punctuation', params: ['..............', ',;:.,.,\'\'\"', 'orange'] },
+
+  // UPPERCASE
+  { name: 'flat-licens-apache', params: ['license', 'MIT/Apache-2.0', 'blue'] },
+  { name: 'flat-licens-mit', params: ['license', 'MIT', 'blue'] },
+  { name: 'flat-licens-bsd', params: ['license', 'BSD', 'blue'] },
+  { name: 'flat-libscore', params: ['libscore', 'NaN', 'blue'] },
+  { name: 'flat-talk-node', params: ['talk', 'Talk-node-sdk', 'blue'] },
+  { name: 'flat-code-quality', params: ['code-quality', 'C', 'yellowgreen'] }
 ];
 
 if (!fs.existsSync(dir)) {
