@@ -1,4 +1,4 @@
-import Badgs from '../src';
+import Badgs from '../src/lib';
 import fs from 'fs';
 import path from 'path';
 
