@@ -23,11 +23,30 @@ Badges generator
 
 ```
 npm i badgs
+
+// OR for CLI usage
+npm i -g badgs
 ```
 
 ## Usage
 
-TODO
+### CLI
+```
+badgs subject status color [-o output.svg]
+
+// Examples
+badgs build success green // File will be saved inbuild-success-green.svg
+badgs build success green -o custom_file_name.svg
+```
+
+### As module
+```js
+import Badgs from 'badgs';
+
+const badgs = new Badgs();
+
+console.log(badgs.render('status', 'subject', 'red'));
+```
 
 ## Dependencies
 
