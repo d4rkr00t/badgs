@@ -1,4 +1,4 @@
-import Badgs from '../src';
+import Badgs from '../src/lib';
 
 describe('Badgs', function () {
   describe('#constructor', function () {

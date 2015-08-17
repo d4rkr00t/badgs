@@ -8,7 +8,7 @@
   "scripts": {
     "audit": "nsp package",
     "babel-node": "babel-node",
-    "build": "babel -d ./lib ./src",
+    "build": "babel -d ./ ./src",
     "check": "npm run audit && npm outdated --depth 0",
     "cov": "babel-node ./node_modules/.bin/isparta cover --report lcovonly --report html _mocha -- test/*.test.js -r test/setup.js",
     "coveralls": "npm run cov && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
@@ -19,6 +19,9 @@
     "readme": "node ./node_modules/node-readme/bin/node-readme.js",
     "test": "mocha test/*.test.js -r babel/register -r test/setup.js",
     "validate": "npm run lint && npm run build && npm test"
+  },
+  "bin": {
+    "badgs": "bin/cli.js"
   },
   "keywords": [
     "badges",

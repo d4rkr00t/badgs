@@ -1,7 +1,7 @@
 import http from 'http';
 import request from 'supertest';
 
-import middleware from '../src/middleware';
+import middleware from '../src/lib/middleware';
 
 function createServer(badgs) {
   const _middleware = middleware(badgs);
