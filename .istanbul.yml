@@ -1,3 +1,4 @@
 instrumentation:
   root: src/lib
   include-all-sources: true
+  excludes: ['templates/**']
