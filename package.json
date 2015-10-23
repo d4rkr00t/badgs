@@ -32,7 +32,7 @@
     "url": "http://github.com/d4rkr00t"
   },
   "pre-commit": [
-    "lint"
+    "validate"
   ],
   "devDependencies": {
     "babel": "^5.8.21",
