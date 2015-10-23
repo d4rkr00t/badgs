@@ -9,8 +9,6 @@
 
 Badges generator
 
-![nodei.co](https://nodei.co/npm/badgs.png?downloads=true&downloadRank=true&stars=true)
-
 ## Features
 
 * Generates badges like any you can see above.
@@ -49,25 +47,6 @@ const badgs = new Badgs();
 console.log(badgs.render('status', 'subject', 'red'));
 ```
 
-## Dependencies
-
-Package | Version | Dev
---- |:---:|:---:
-[babel](https://www.npmjs.com/package/babel) | ^5.8.21 | ✔
-[babel-eslint](https://www.npmjs.com/package/babel-eslint) | ^4.0.7 | ✔
-[chai](https://www.npmjs.com/package/chai) | ^3.2.0 | ✔
-[cz-conventional-changelog](https://www.npmjs.com/package/cz-conventional-changelog) | ^1.1.4 | ✔
-[coveralls](https://www.npmjs.com/package/coveralls) | ^2.11.4 | ✔
-[eslint](https://www.npmjs.com/package/eslint) | ^1.1.0 | ✔
-[isparta](https://www.npmjs.com/package/isparta) | ^3.0.3 | ✔
-[mocha](https://www.npmjs.com/package/mocha) | ^2.2.5 | ✔
-[mocha-lcov-reporter](https://www.npmjs.com/package/mocha-lcov-reporter) | 1.0.0 | ✔
-[node-readme](https://www.npmjs.com/package/node-readme) | ^0.1.8 | ✔
-[nsp](https://www.npmjs.com/package/nsp) | ^1.0.3 | ✔
-[pre-commit](https://www.npmjs.com/package/pre-commit) | ^1.1.1 | ✔
-[supertest](https://www.npmjs.com/package/supertest) | ^1.0.1 | ✔
-
-
 ## Author
 
 Ideas/Templates — stolen from [here](https://github.com/badges/shields) and [here](https://github.com/artems/devkit).
@@ -76,8 +55,8 @@ Stanislav Sysoev <d4rkr00t@gmail.com> http://github.com/d4rkr00t
 
 ## License
 
- - **MIT** : http://opensource.org/licenses/MIT
+- **MIT** : http://opensource.org/licenses/MIT
 
 ## Contributing
 
-Contributing are highly welcome!
+Contributing are highly welcome! This repos is commitizen friendly — please read about it [here](http://commitizen.github.io/cz-cli/).

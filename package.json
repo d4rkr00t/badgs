@@ -13,10 +13,9 @@
     "coveralls": "npm run cov && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
     "generate": "babel-node test/generate",
     "lint": "eslint src test",
-    "readme": "node ./node_modules/node-readme/bin/node-readme.js",
     "test": "mocha test/*.test.js -r babel/register -r test/setup.js",
     "validate": "npm run lint && npm test",
-    "prepare": "npm run validate && npm run check && npm run readme && npm run build",
+    "prepare": "npm run validate && npm run check && npm run build",
     "pp": "npm run prepare"
   },
   "bin": {
@@ -45,7 +44,6 @@
     "isparta": "^3.0.3",
     "mocha": "^2.2.5",
     "mocha-lcov-reporter": "1.0.0",
-    "node-readme": "^0.1.8",
     "nsp": "^1.0.3",
     "pre-commit": "^1.1.1",
     "supertest": "^1.0.1"
