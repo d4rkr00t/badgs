@@ -1,10 +1,13 @@
 {
   "name": "badgs",
-  "version": "1.0.0",
+  "version": "0.0.0-semantically-released",
   "description": "Badges generator",
   "main": "lib/index.js",
   "license": "MIT",
-  "repository": "d4rkr00t/badgs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/d4rkr00t/badgs"
+  },
   "scripts": {
     "audit": "nsp package",
     "build": "babel -d ./ ./src",
@@ -13,6 +16,7 @@
     "coveralls": "npm run cov && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
     "generate": "babel-node test/generate",
     "lint": "eslint src test",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "test": "mocha test/*.test.js -r babel/register -r test/setup.js",
     "validate": "npm run lint && npm test",
     "prepare": "npm run validate && npm run check && npm run build",
@@ -38,14 +42,15 @@
     "babel": "^5.8.21",
     "babel-eslint": "^4.0.7",
     "chai": "^3.2.0",
-    "cz-conventional-changelog": "^1.1.4",
     "coveralls": "^2.11.4",
+    "cz-conventional-changelog": "^1.1.4",
     "eslint": "^1.1.0",
     "isparta": "^3.0.3",
     "mocha": "^2.2.5",
     "mocha-lcov-reporter": "1.0.0",
     "nsp": "^1.0.3",
     "pre-commit": "^1.1.1",
+    "semantic-release": "^4.3.5",
     "supertest": "^1.0.1"
   },
   "czConfig": {
