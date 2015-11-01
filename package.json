@@ -9,7 +9,7 @@
     "url": "https://github.com/d4rkr00t/badgs"
   },
   "scripts": {
-    "audit": "nsp package",
+    "audit": "nsp check package",
     "build": "babel -d ./ ./src",
     "check": "npm run audit && npm outdated --depth 0",
     "cov": "babel-node ./node_modules/.bin/isparta cover --report lcovonly --report html _mocha -- test/*.test.js -r test/setup.js",
@@ -48,7 +48,7 @@
     "isparta": "^3.0.3",
     "mocha": "^2.2.5",
     "mocha-lcov-reporter": "1.0.0",
-    "nsp": "^1.0.3",
+    "nsp": "^2.0.0",
     "pre-commit": "^1.1.1",
     "semantic-release": "^4.3.5",
     "supertest": "^1.0.1"
