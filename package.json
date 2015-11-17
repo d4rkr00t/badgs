@@ -39,7 +39,7 @@
     "validate"
   ],
   "devDependencies": {
-    "babel": "^5.8.21",
+    "babel": "^6.1.18",
     "babel-eslint": "^4.0.7",
     "chai": "^3.2.0",
     "coveralls": "^2.11.4",
