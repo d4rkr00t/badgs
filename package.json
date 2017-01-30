@@ -55,7 +55,7 @@
     "nsp": "^2.3.2",
     "pre-commit": "^1.1.1",
     "semantic-release": "^4.3.5",
-    "supertest": "^1.2.0"
+    "supertest": "^3.0.0"
   },
   "config": {
     "commitizen": {
